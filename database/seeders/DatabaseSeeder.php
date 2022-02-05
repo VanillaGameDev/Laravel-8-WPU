@@ -24,16 +24,27 @@ class DatabaseSeeder extends Seeder
         Post::factory(20)->create();
 
         Category::create([
-            'name' => 'Programing',
-            'slug' => 'programing'
-        ]);
-        Category::create([
-            'name' => 'Web-Design',
+            'name' => 'Web Design',
             'slug' => 'web-design'
         ]);
         Category::create([
-            'name' => 'GameDev',
-            'slug' => 'game-dev'
+            'name' => 'Game Design',
+            'slug' => 'game-design'
+        ]);
+
+        Category::create([
+            'name' => 'Esports',
+            'slug' => 'esports'
+        ]);
+
+        Category::create([
+            'name' => 'Youtuber',
+            'slug' => 'youtuber'
+        ]);
+
+        Category::create([
+            'name' => 'Trading',
+            'slug' => 'trading'
         ]);
 
         // User::create([
