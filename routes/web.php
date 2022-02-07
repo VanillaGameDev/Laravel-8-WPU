@@ -1,38 +1,30 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 use App\Models\Category;
-use App\Models\Post;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home',
-        'active' => 'home',
-    ]);
-});
-Route::get('/about', function () {
-    return view('about',[
-        'title' => 'About',
-        'active' => 'about',
-        'name' => 'windah',
-        'email' => 'windahgeming@gmail.co.id.com.yahoo',
-        'image' => 'download.jpg',
-    ]);
-});
+Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/posts/{post:slug}',[PostController::class, 'show']);
 
-Route::get('/categories', function(){
-    return view('categories', [
-        'title' => 'Post Categories',
-        'active' => 'categories',
-        'categories' => Category::all()
-    ]);
-});
+Route::get('/categories', [CategoriesController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
+
 
 // bye kwkwwk
 // Route::get('/categories/{category:slug}', function (Category $category){

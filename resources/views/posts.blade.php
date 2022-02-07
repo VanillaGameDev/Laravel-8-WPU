@@ -1,7 +1,10 @@
 @extends('layouts.main')
 
 @section('container')
+{{-- bagian title --}}
 <h1 class="mb-3 text-center">{{ $title }}</h1>
+
+{{-- bagian search --}}
 <div class="row justify-content-center">
     <div class="col-md-6">
         <form action="/posts">
@@ -27,6 +30,7 @@
     </div>
 </div>
 
+{{-- bagian post yang baru di bikin --}}
 @if($posts->count())
 
 <div class="container">
@@ -57,6 +61,12 @@
     </div>
 </div>
 
+{{-- bagian pagination  --}}
+{{-- <div class="d-flex justify-content-center">
+    {{ $posts->links() }}
+</div> --}}
+
+{{-- bagian posts --}}
 <div class="container">
     <div class="row">
         @foreach($posts->skip(1) as $post)
@@ -93,6 +103,7 @@
 
 @endif
 
+{{-- bagian pagination  --}}
 <div class="d-flex justify-content-center">
     {{ $posts->links() }}
 </div>
