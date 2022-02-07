@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         # Menggunakan Faker
         User::factory(5)->create();
 
-        Post::factory(20)->create();
+        Post::factory(50)->create();
 
         Category::create([
             'name' => 'Web Design',
