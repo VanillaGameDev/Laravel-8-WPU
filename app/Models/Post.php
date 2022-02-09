@@ -8,7 +8,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
-    use HasFactory, Sluggable;
+    use HasFactory;
+    use sluggable;
 
     protected $guarded = ['id'];
     protected $with =['category', 'author'];
