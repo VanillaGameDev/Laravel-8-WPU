@@ -11,19 +11,34 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
+        @if(session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('loginError') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
 
         <main class="form-field">
-            <form>
+            <form action="/login" method="POST">
+                @csrf
               <h1 class="h3 mb-3 fw-normal text-center">Pwease Lomgin</h1>
 
               <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-bottom" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input type="email" name="email" class="form-control rounded-bottom @error('email') is-invalid @enderror"
+                id="email" placeholder="name@example.com" value="{{ old('email') }}"  autofocus required>
+                <label for="email">Email address</label>
+
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
 
               <div class="form-floating">
-                <input type="password" class="form-control rounded-top" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input type="password" name="password" class="form-control rounded-top" id="password"
+                placeholder="Password" required>
+                <label for="password">Password</label>
               </div>
 
               <button class="w-100 btn btn-lg btn-primary mt-1" type="submit">Lomgin</button>
