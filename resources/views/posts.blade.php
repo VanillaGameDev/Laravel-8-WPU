@@ -37,8 +37,16 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mb-5">
+
+                @if($posts[0]->image)
+                <div>
+                    <img src="{{ asset('storage/' . $posts[0]->image) }}"
+                    class="card-img-top" alt="{{ $posts[0]->category->name }}" class="img-fluid">
+                </div>
+                @else
                 <img src="https://source.unsplash.com/500x400?{{ $posts[0]->category->name }}"
-                class="card-img-top" alt="...">
+                class="card-img-top" alt="{{ $posts[0]->category->name }}" class="img-fluid">
+                @endif
 
                 <div class="card-body text-center">
 
@@ -78,9 +86,13 @@
                     </a>
                 </div>
 
-                <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}"
-                {{-- class="card-img-top" alt="{{ $post->category->name }}"> --}}
-                class="card-img-top" alt="...">
+                @if($post->image)
+                    <img src="{{ asset('storage/' . $post->image) }}"
+                    class="card-img-top" alt="{{ $post->category->name }}" class="img-fluid">
+                @else
+                    <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}"
+                    class="card-img-top" alt="{{ $post->category->name }}">
+                @endif
 
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
@@ -107,9 +119,6 @@
 <div class="d-flex justify-content-center">
     {{ $posts->links() }}
 </div>
-
-
-
 
     {{-- @foreach($posts->skip(1) as $post)
     <article class="mb-5 border-bottom pb-3">

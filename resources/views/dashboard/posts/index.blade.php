@@ -5,8 +5,18 @@
     <h1 class="h2">My Posts</h1>
 </div>
 
-<div class="table-responsive col-lg-8">
+@if(session()->has('success'))
+<div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+<div class="col-lg-8">
     <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create New Post</a>
+</div>
+
+<div class="table-responsive col-lg-8">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -23,10 +33,13 @@
           <td>{{ $post->title }}</td>
           <td>{{ $post->category->name }}</td>
           <td>
-              <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <a href="" class="badge bg-danger"><span data-feather="x-circle"></span></a>
-
+              <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info text-decoration-none"><span data-feather="eye"></span>View</a>
+              <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge bg-warning text-decoration-none"><span data-feather="edit"></span>Edit</a>
+              <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
+                @method('delete')
+                @csrf
+                <button class="badge bg-danger border-0" onclick="return confirm('Ur Sure?')"><span data-feather="x-circle"></span>Delete</button>
+              </form>
           </td>
         </tr>
         @endforeach

@@ -16,12 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::create([
+            'name' => 'windah basudara',
+            'username' => 'windahgeming',
+            'email' => 'windahgeming@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
 
         # Menggunakan Faker
         User::factory(5)->create();
 
-        Post::factory(50)->create();
+        Post::factory(20)->create();
 
         Category::create([
             'name' => 'Web Design',
@@ -47,11 +52,11 @@ class DatabaseSeeder extends Seeder
             'slug' => 'trading'
         ]);
 
-        // User::create([
-        //     'name' => 'windah basudara',
-        //     'email' => 'windahgeming@gmail.com',
-        //     'password' => bcrypt('12345')
-        // ]);
+        Category::create([
+            'name' => 'Game Developer',
+            'slug' => 'game-developer'
+        ]);
+
 
         // User::create([
         //     'name' => 'Mirza',
