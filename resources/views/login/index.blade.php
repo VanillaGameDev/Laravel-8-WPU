@@ -44,7 +44,7 @@
               <button class="w-100 btn btn-lg btn-primary mt-1" type="submit">Lomgin</button>
               {{-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> --}}
             </form>
-            <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now!</a></small>
+            <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Lesgooo!</a></small>
         </main>
 
     </div>
