@@ -9,10 +9,10 @@
     <form method="POST" action="/dashboard/categories" class="mb-5" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="title" class="form-label">Name</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-            name="title" placeholder="Mmmmmmmmmmmmmmmmmmmmmm" required autofocus value="{{ old('title') }}">
-            @error('title')
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
+            name="name" placeholder="Mmmmmmmmmmmmmmmmmmmmmm" required autofocus value="{{ old('name') }}">
+            @error('name')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>

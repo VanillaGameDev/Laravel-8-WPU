@@ -31,12 +31,17 @@
           <td>{{ $loop->iteration }}</td>
           <td>{{ $category->name }}</td>
           <td>
-              <a href="/posts?category={{ $category->slug }}" class="badge bg-info text-decoration-none"><span data-feather="eye"></span>View</a>
-              <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning text-decoration-none"><span data-feather="edit"></span>Edit</a>
-              <form action="/dashboard/categories/{{ $category->slug }}" method="post" class="d-inline">
+              <a href="/posts?category={{ $category->slug }}" class="badge bg-info text-decoration-none">
+                <span data-feather="eye"></span>View</a>
+
+              <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning text-decoration-none">
+                <span data-feather="edit"></span>Edit</a>
+
+              <form action="/dashboard/categories/{{ $category->id }}" method="POST" class="d-inline">
                 @method('delete')
                 @csrf
-                <button class="badge bg-danger border-0" onclick="return confirm('Ur Sure?')"><span data-feather="x-circle"></span>Delete</button>
+                <button class="badge bg-danger border-0" onclick="return confirm('Ur Sure?')">
+                    <span data-feather="x-circle"></span>Delete</button>
               </form>
           </td>
         </tr>

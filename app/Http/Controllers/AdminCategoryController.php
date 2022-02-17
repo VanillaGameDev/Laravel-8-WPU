@@ -43,10 +43,12 @@ class AdminCategoryController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'slug' => 'required|unique:posts'
+            'slug' => 'required|unique:categories'
         ]);
 
         Category::create($validatedData);
+
+        return redirect('/dashboard/categories')->with('success','New Categories Added!');
     }
 
     /**
