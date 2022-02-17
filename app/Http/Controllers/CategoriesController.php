@@ -9,7 +9,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        return view('categories', [
+        return view('Categories', [
             'title' => 'Post Categories',
             'active' => 'categories',
             'categories' => Category::all()

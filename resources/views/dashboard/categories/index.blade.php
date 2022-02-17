@@ -31,7 +31,7 @@
           <td>{{ $loop->iteration }}</td>
           <td>{{ $category->name }}</td>
           <td>
-              <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info text-decoration-none"><span data-feather="eye"></span>View</a>
+              <a href="/posts?category={{ $category->slug }}" class="badge bg-info text-decoration-none"><span data-feather="eye"></span>View</a>
               <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning text-decoration-none"><span data-feather="edit"></span>Edit</a>
               <form action="/dashboard/categories/{{ $category->slug }}" method="post" class="d-inline">
                 @method('delete')

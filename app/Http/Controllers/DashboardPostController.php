@@ -1,7 +1,5 @@
 <?php
 
-use \Cviebrock\EloquentSluggable\Services\SlugService;
-
 namespace App\Http\Controllers;
 
 use App\Models\Category;
