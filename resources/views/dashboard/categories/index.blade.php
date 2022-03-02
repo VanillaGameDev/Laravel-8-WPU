@@ -34,8 +34,8 @@
               <a href="/posts?category={{ $category->slug }}" class="badge bg-info text-decoration-none">
                 <span data-feather="eye"></span>View</a>
 
-              <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning text-decoration-none">
-                <span data-feather="edit"></span>Edit</a>
+              {{-- <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning text-decoration-none">
+                <span data-feather="edit"></span>Edit</a> --}}
 
               <form action="/dashboard/categories/{{ $category->id }}" method="POST" class="d-inline">
                 @method('delete')
