@@ -1,7 +1,3 @@
-
-
-
-
   .form-field .form-floating:focus-within {
     z-index: 2;
   }
@@ -21,3 +17,62 @@
   .form-registration input{
       border-radius: 0;
   }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.about-main{
+    padding: 100px;
+    width: 800px;
+    height: 520px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+.ul-about{
+    padding-top: 50px;
+    text-align: center;
+    margin-left: -45px;
+}
+.li-about{
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+
+.img-about{
+    background-image: url(/img/download.jpg);
+    background-color: #eaeaea;
+    background-size: cover;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid #eaeaea;
+}
+
+.h1-about{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+    color: red;
+
+}
+
+.text-about{
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.p-about{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 450px;
+    height: auto;
+
+}
+
