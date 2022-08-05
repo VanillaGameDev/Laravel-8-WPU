@@ -2,6 +2,7 @@
 
 @section('container')
 
+<section>
 <div class="row justify-content-center">
     <div class="col-md-5">
 
@@ -21,9 +22,9 @@
         <main class="form-field">
             <form action="/login" method="POST">
                 @csrf
-              <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
+                <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
 
-              <div class="form-floating mb-3">
+                <div class="form-floating mb-3">
                 <input type="email" name="email" class="form-control rounded-bottom @error('email') is-invalid @enderror"
                 id="email" placeholder="name@example.com" value="{{ old('email') }}"  autofocus required>
                 <label for="email">Email address</label>
@@ -33,22 +34,24 @@
                     {{ $message }}
                 </div>
                 @enderror
-              </div>
+                </div>
 
-              <div class="form-floating">
+                <div class="form-floating">
                 <input type="password" name="password" class="form-control rounded-top" id="password"
                 placeholder="Password" required>
                 <label for="password">Password</label>
-              </div>
+                </div>
 
-              <button class="w-100 btn btn-lg btn-primary mt-1" type="submit">Login</button>
-              {{-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> --}}
+                <button class="w-100 btn btn-lg btn-primary mt-1" type="submit">Login</button>
+                {{-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> --}}
             </form>
             <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now!</a></small>
         </main>
 
     </div>
 </div>
+
+</section>
 
 
 @endsection
