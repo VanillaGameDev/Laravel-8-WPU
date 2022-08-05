@@ -19,7 +19,7 @@
   <body>
     @include('navbar.navbar')
 
-    <div class="container mt-3">
+    <div>
         @yield('container')
     </div>
 
