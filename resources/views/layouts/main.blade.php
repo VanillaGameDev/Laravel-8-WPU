@@ -14,7 +14,7 @@
     {{-- style --}}
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>OxStudio | {{ $title }}</title>
+    <title>OxNews | {{ $title }}</title>
   </head>
   <body>
     @include('navbar.navbar')

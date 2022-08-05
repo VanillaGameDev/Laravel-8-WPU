@@ -29,7 +29,7 @@
             </article>
 
 
-            <a href="/posts">Back To Post</a>
+            <a class="text-decoration-none btn btn-primary" href="/posts">Back To Post</a>
         </div>
     </div>
 </div>
