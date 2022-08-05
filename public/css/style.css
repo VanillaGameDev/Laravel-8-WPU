@@ -77,11 +77,18 @@ body {
     height: auto;
 }
 
-.jumbotron {
-    padding-top: 2rem;
+#home {
+    padding-top: 5rem;
     background-color: #e2edff;
 }
 
-#projects {
+#about {
     background-color: #e2edff;
+}
+#parthner {
+    background-color: #e2edff;
+}
+
+section {
+    padding-top: 5rem;
 }
