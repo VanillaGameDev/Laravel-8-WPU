@@ -20,7 +20,7 @@
 {{-- Home --}}
 <section id="home">
     <h1 style="text-align: center;">Selamat Datang Di <strong>OxNews</strong></h1>
-    <p style="text-align: center; font-size: 20px">Di Website ini kita menyajikan Berita-Berita Yang Menarik, Register Sekarang!!</p>
+    <p style="text-align: center; font-size: 20px">Di Website ini kita menyajikan Berita-Berita Yang Menarik, Register <a href="/register" class="text-dark fw-bold" style="text-decoration: none">Sekarang!!</a></p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L30,144C60,160,120,192,180,213.3C240,235,300,245,360,229.3C420,213,480,171,540,170.7C600,171,660,213,720,240C780,267,840,277,900,250.7C960,224,1020,160,1080,160C1140,160,1200,224,1260,218.7C1320,213,1380,139,1410,101.3L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
 </section>
 {{-- End Home --}}
@@ -31,7 +31,7 @@
     <h2>Pofile</h2>
     <img src="img/download.jpg" alt="Mirza ElFandi" width="200" class="rounded-circle img-thumbnail">
     <h1 class="display-4">Mirza ElFandi</h1>
-    <p class="lead">Web Developer | Game Developer</p>
+    <p class="lead">Web Developer & Game Developer</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e2edff" fill-opacity="1" d="M0,192L26.7,192C53.3,192,107,192,160,186.7C213.3,181,267,171,320,144C373.3,117,427,75,480,69.3C533.3,64,587,96,640,101.3C693.3,107,747,85,800,69.3C853.3,53,907,43,960,74.7C1013.3,107,1067,181,1120,192C1173.3,203,1227,149,1280,106.7C1333.3,64,1387,32,1413,16L1440,0L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
 
 </section>
@@ -138,10 +138,12 @@
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Melihat Postingan</li>
                             <li>Akses Dashboard</li>
+                            <li>Membuat Postingan</li>
                             <li>-</li>
                             <li>-</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+
+                        <a href="/register"><button type="button" class="w-100 btn btn-lg btn-primary">Register</button></a>
                     </div>
                 </div>
             </div>
@@ -156,6 +158,7 @@
                             <li>Melihat Postingan</li>
                             <li>Akses Dashboard</li>
                             <li>Membuat Postingan</li>
+                            <li>Membuat Category</li>
                             <li>-</li>
                         </ul>
                         <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
@@ -173,6 +176,7 @@
                             <li>Melihat Postingan</li>
                             <li>Akses Dashboard</li>
                             <li>Membuat Postingan</li>
+                            <li>Membuat Category</li>
                             <li>Mendapatkan 2% Penghasilan Perusahaan</li>
                         </ul>
                         <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>

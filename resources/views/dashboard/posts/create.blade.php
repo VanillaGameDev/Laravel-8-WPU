@@ -15,7 +15,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-            name="title" placeholder="Mmmmmmmmmmmmmmmmmmmmmm" required autofocus value="{{ old('title') }}">
+            name="title" placeholder="Name" required autofocus value="{{ old('title') }}">
             @error('title')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -25,7 +25,7 @@
         <div class="mb-3">
             <label for="slug" class="form-label">Slug</label>
             <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"
-            placeholder="otomatis ke isi sheeeesh" required value="{{ old('slug') }}">
+            placeholder="Slug" required value="{{ old('slug') }}">
             @error('slug')
                 <div class="invalid-feedback">
                     {{ $message }}

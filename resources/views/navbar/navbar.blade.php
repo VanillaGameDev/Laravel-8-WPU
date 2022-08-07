@@ -43,7 +43,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                 <li><a class="dropdown-item" href="/dashboard" >
-                    <i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
+                    <i class="bi bi-bar-chart-line"></i> My Dashboard</a></li>
 
                 <li><hr class="dropdown-divider"></li>
 

@@ -40,7 +40,7 @@
               <form action="/dashboard/categories/{{ $category->id }}" method="POST" class="d-inline">
                 @method('delete')
                 @csrf
-                <button class="badge bg-danger border-0" onclick="return confirm('Ur Sure?')">
+                <button class="badge bg-danger border-0" onclick="return confirm('Yakin Mau Hapus?')">
                     <span data-feather="x-circle"></span>Delete</button>
               </form>
           </td>

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+<section>
 <h1 class="mb-3 text-center">{{ $title }}</h1>
 
 <div class="container">
@@ -23,6 +24,8 @@
         @endforeach
     </div>
 </div>
+
+</section>
 
 
 {{-- <p><a href="/posts" class="text-decoration-none">Back To Blog Post</a></p>

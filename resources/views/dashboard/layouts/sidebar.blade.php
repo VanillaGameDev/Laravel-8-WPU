@@ -2,18 +2,18 @@
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
           <li class="nav-item">
-              <a class="nav-link" href="/">
-                <span data-feather="home"></span>Home Page
+              <a class="nav-link table-hover" href="/">
+                <i class="bi bi-house"></i> Home
               </a>
             </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
-            <span data-feather="layout"></span>Dashboard
+            <i class="bi bi-bar-chart-line"></i> Dashboard
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-            <span data-feather="file-text"></span>My Post
+            <i class="bi bi-journal-album"></i> My Post
           </a>
         </li>
       </ul>
@@ -24,7 +24,7 @@
       <ul class="nav flex-colum">
         <li class="nav-item">
             <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
-              <span data-feather="file-text"></span>Post Category
+              <span data-feather="file-text"></span><i class="bi bi-box-seam"></i> Post Category
             </a>
           </li>
       </ul>
